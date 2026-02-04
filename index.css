@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body, #root {
+    margin: 0;
+    padding: 0;
+    font-family: Karla, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/background.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: fit-content;
+    max-width: 600px;
+    min-height: 550px;
+    margin: 0 auto;
+}
+
+section.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+}
+
+section.intro > h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+section.intro > p {
+    font-family: Inter, sans-serif;
+    margin-block: 0.5em 2em;
+}
+
+button {
+    font-family: Inter, sans-serif;
+    cursor: pointer;
+}
+
+button.large-button {
+    padding: 1em 4em;
+    color: #F5F7FB;
+    background-color: #4D5B9E;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+section.questions {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 3em;
+}
+
+.question {
+    border-bottom: 1px solid #DBDEF0;
+    margin-bottom: 1em;
+}
+
+.question > h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #293264;
+    margin: 0;
+}
+
+.answers {
+    display: flex;
+    gap: 0.6em;
+    flex-wrap: wrap;
+    margin-block: 0.6em;
+}
+
+.answers > button {
+    font-size: 0.64rem;
+    color: #4D5B9E;
+    border: 1px solid #4D5B9E;
+    background-color: #F5F7FB;
+    border-radius: 7px;
+    padding: 0.5em 2em;
+}
+
+.answers > button.selected {
+    background-color: #D6DBF5;
+    border: 1px solid #D6DBF5;
+}
+
+.answers > button.correct {
+    background-color: #94D7A2;
+    border: 1px solid #94D7A2;
+    color: #293264;
+}
+
+.answers > button.incorrect {
+    background-color: #F8BCBC;
+    border: 1px solid #F8BCBC;
+    color: #293264;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}   
+
+.questions > .large-button {
+    align-self: center;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    color: #293264;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
